@@ -1,5 +1,4 @@
-
-1. Entity name, synonyms and description
+Entity name, synonyms and description
 
 nation: synonyms are country, nation refers to the country as a whole, for our project its the US. When looking at the data of the nation it is a compilation of all of the states to get a single number for them all, despite the various differences between them
 State: synonyms are land, area, state refers to the an area of the nation that is claimed/labeled properly, we are looking at specific states to grab data from in the U.S
@@ -10,7 +9,8 @@ education: the level of schooling and the quality of it as received by the resid
 Family: synonyms are clan, group. Family refers to the background of the individuals such as their health history as well as their siblings and see if there are any health issue factors. 
  
  
- 2. Relationship maxima and minima
+Relationship maxima and minima
+
 Nation_has_health_data:
 Max: One-one, One nation can have one set of health data.
 Min:one-zero, one nation has to exist, but not all nations have health data
@@ -48,7 +48,9 @@ demographics_have_family
 Max: one-one, demographics consist of one family
 Min: one-zero, demographics consist of no family
  
- 3. maxima and minima per attribute
+
+maxima and minima per attribute
+
 Nation:
 id: max one id, min one id
 state: max:none, min: one
