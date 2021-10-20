@@ -137,4 +137,15 @@ Demographics:
 	- Cannot remove Demographics if City is using it
 	- Cannot remove Education if Family is using it
 	
+	Cascade and Restrict Rules on Foreign Keys that Implement Dependency Relationships
+	Foreign Keys: education_level, family_past 
+
+	Cascade:
+	- family_past reflects change onto access from family
+	- education_level reflects change onto access from education
+	
+	Restrict: 
+	- Cannot remove the foreign key education_level while being used by education
+	- Cannot remove the foreign key family_past while being used by family
+	
 
