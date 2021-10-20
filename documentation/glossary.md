@@ -109,7 +109,7 @@ Demographics:
 	- healthdata_belongsto_nation, dependency relationship 
 	- education, independent entity
 	
-Cascade and Restrict:
+	Cascade and Restrict:
 	Cascade:
 	- City reflects change to State
 	- State reflects change to Nation
