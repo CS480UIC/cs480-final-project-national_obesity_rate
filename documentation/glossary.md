@@ -109,6 +109,18 @@ Demographics:
 	- healthdata_belongsto_nation, dependency relationship 
 	- education, independent entity
 	
+Cascade and Restrict:
+	Cascade:
+	- City reflects change to State
+	- State reflects change to Nation
+	- Health data reflects change to City Nation or State depending on whos data
+	- Demographic changes reflect onto City and State
 	
+	Restrict:
+	- Cannot remove Health data if City Nation or State is using it
+	- Cannot remove State if City is using it
+	- Cannot remove Nation if State is using it
+	- Cannot remove Demographics if City is using it
+	- Cannot remove Education if Family is using it
 	
 
