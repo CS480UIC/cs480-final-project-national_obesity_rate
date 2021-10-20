@@ -109,6 +109,20 @@ Demographics:
 	- healthdata_belongsto_nation, dependency relationship 
 	- education, independent entity
 	
+	Supertypes/Subtypes:
+	-nation/state
+	-state/city
+	-demographics/family
+	-city/education
+	-city/family
+	-city/demographics
+	
+	Partitions:
+	-weight, acivity_level, and bmi partition health_date
+	-history, progress, and availability partition education
+	-family_history and family_genetic partition family
+	-most of demographics exists as a partition for data purposes
+	
 	Cascade and Restrict:
 	Cascade:
 	- City reflects change to State
