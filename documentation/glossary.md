@@ -100,4 +100,8 @@ Demographics:
 	employment	: max many employments, min no employment
           Family_history: max one history, min no history
 	
+	
+	Dependent and Independent Entities
+	
+	
 
