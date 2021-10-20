@@ -148,4 +148,25 @@ Demographics:
 	- Cannot remove the foreign key education_level while being used by education
 	- Cannot remove the foreign key family_past while being used by family
 	
-
+	Attribute types:
+	CREATE TABLE Nation (
+		nation_id	          SMALLINT UNSIGNED PRIMARY KEY UNIQUE NOT NULL
+		state 		          VARCHAR(20) NOT NULL
+		health_data_nation        SMALLINT UNSIGNED NOT NULL
+		demographic_data_nation   SMALLINT_UNSIGNED NOT NULL
+	)
+	
+	CREATE TABLE State (
+		state_id	          SMALLINT UNSIGNED PRIMARY KEY UNIQUE NOT NULL
+		health_data_state         SMALLINT UNSIGNED NOT NULL
+		demographic_data_state    SMALLINT_UNSIGNED NOT NULL
+	)
+	
+	CREATE TABLE City (
+		city_id	                  SMALLINT UNSIGNED PRIMARY KEY UNIQUE NOT NULL
+		availability_healthy_food SMALLINT UNSIGNED NOT NULL
+		num_gym                   SMALLINT UNSIGNED NOT NULL
+		number_grocery_store      SMALLINT UNSIGNED NOT NUL
+		health_data_city          SMALLINT UNSIGNED NOT NULL
+		demographic_city          SMALLINT_UNSIGNED NOT NULL
+	)
