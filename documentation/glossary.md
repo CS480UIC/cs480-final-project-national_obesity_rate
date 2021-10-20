@@ -103,5 +103,12 @@ Demographics:
 	
 	Dependent and Independent Entities
 	
+	- city-belongsto-state, dependency relationship
+	-  state-belongsto-nation, dependency relationship
+	- demographics-belongsto-family, dependency relationship
+	- healthdata_belongsto_nation, dependency relationship 
+	- education, independent entity
+	
+	
 	
 
