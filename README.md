@@ -4,7 +4,7 @@
 1. [Database description](#description)
  
 # Database
-national_obesity_rate
+national_obesity_rate 
 # Author(s)
 Kevin Elliott
 Andy Hansana
