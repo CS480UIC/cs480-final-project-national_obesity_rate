@@ -1,11 +1,17 @@
 1.Entity name, synonyms and description
 
 nation: synonyms are country, nation refers to the country as a whole, for our project its the US. When looking at the data of the nation it is a compilation of all of the states to get a single number for them all, despite the various differences between them
+
 State: synonyms are land, area, state refers to the an area of the nation that is claimed/labeled properly, we are looking at specific states to grab data from in the U.S
+
 city:  synonyms are town, village, capital, downtown. For our project cities will be the focus of the collection of health data since that is where the most people are. We will also be comparing city to city primarily and since cities have the biggest impact on states they need the most attention for our data.
+
 heath_data: health data is collecting information on the well-being of a residential area 
+
 Demographics: synonyms are enumeration, and statistics. Demographics refer to the statistics of what the group of people are, and how they described as well as how they differ from others such as their background. 
+
 education: the level of schooling and the quality of it as received by the residents of a predetermined area
+
 Family: synonyms are clan, group. Family refers to the background of the individuals such as their health history as well as their siblings and see if there are any health issue factors. 
  
  
