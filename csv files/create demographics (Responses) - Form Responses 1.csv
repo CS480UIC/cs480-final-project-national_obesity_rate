@@ -1,0 +1,6 @@
+Timestamp,id,population,income,pct_pop_increase,sex,race,age,maritial_status,education_level,employment,family_history
+10/19/2021 22:35:53,1,1000,30000,2,M,W,30,M,C,Y,1
+10/19/2021 22:37:59,50,100000,50000,14,F,B,21,Unmarried,College,Full time,no notable conditions
+10/19/2021 22:38:49,66,100,4 doller,0,M,Asian,23,Unmarried,Masters,Full time,None
+10/19/2021 22:40:01,800,1000000,100000,-14,F,White,27,Married,PhD,Unemployed,"Heart Disease, Alzheimers"
+10/19/2021 22:41:20,987,99,10020000,500,M,Bulgarian,100,Married,None,Full time,none

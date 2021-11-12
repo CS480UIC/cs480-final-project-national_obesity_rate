@@ -1,0 +1,6 @@
+Timestamp,id,history,progress,availability
+10/19/2021 22:42:27,44,College,Done,None
+10/19/2021 22:42:46,55,None,In progress,All
+10/19/2021 22:43:20,81,High School,Done,Half
+10/19/2021 22:43:42,8716,None,Not in progress,None
+10/19/2021 22:43:59,999,College,Not in progress,Yes
