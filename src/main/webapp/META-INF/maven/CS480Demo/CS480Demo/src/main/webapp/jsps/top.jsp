@@ -37,6 +37,8 @@
 		<c:when test="${empty sessionScope.session_user }">
 			<a href="<c:url value='/jsps/user/login.jsp'/>" target="_parent">Login</a> |&nbsp; 
 			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Register</a> |&nbsp; <br/> 
+			<a href="<c:url value='/jsps/user/regist.jsp'/>" target="_parent">Initialize Database</a> |&nbsp; <br/> 
+			
 			
 			<a href="<c:url value='/jsps/nation/nationcreate.jsp'/>" target="_parent">Create Nation</a> |&nbsp; 
 			<a href="<c:url value='/jsps/nation/nationread.jsp'/>" target="_parent">Read Nation</a> |&nbsp;
