@@ -22,22 +22,19 @@
   
   <body>
   <h1>Create a Nation</h1>
-<form action="<c:url value='/nationServletCreate'/>" method="post">
-
-	id    :<input type="text" name="id" value="${form.id }"/>
-	<span style="color: red; font-weight: 900">${errors.id }</span>
+<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
+	id    :<input type="text" name="id" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	state：<input type="text" name="state" value="${form.state }"/>
-	<span style="color: red; font-weight: 900">${errors.state }</span>
+	state：<input type="text" name="state" value="${form.password }"/>
+	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	health_data_nation	：<input type="text" name="health_data_nation" value="${form.health_data_nation }"/>
-	<span style="color: red; font-weight: 900">${errors.health_data_nation }</span>
+	health_data_nation	：<input type="text" name="health_data_nation" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	demographic_data_nation	：<input type="text" name="demographic_data_nation" value="${form.demographic_data_nation }"/>
-	<span style="color: red; font-weight: 900">${errors.demographic_data_nation }</span>
+	demographic_data_nation	：<input type="text" name="demographic_data_nation" value="${form.email }"/>
+	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	
-	
 	<input type="submit" value="Create nation"/>
 </form>
   </body>

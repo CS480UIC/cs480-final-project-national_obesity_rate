@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Nation Output</title>
+    <title>Read Entity Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,23 +21,15 @@
   </head>
   
   <body>
-  <h1>Read Nation Output</h1>
+  <h1>Read Entity Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	
-id:<input type="text" name="id" value="${nation.nation_id }" disabled/>
-<br />
-
-state：<input type="text" name="state" value="${nation.state }" />
-<br />
-
-health_data_nation	：<input type="text" name="health_data_nation" value="${nation.health_data_nation }" />
-<br />
-
-demographic_data_nation	：<input type="text" name="demographic_data_nation" value="${nation.demographic_data_nation }" />
-<br />
-	
-	
+	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<br/>
+	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	<br/>
+	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	<br/>
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>
