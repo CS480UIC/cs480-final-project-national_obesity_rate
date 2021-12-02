@@ -23,9 +23,10 @@
   <body>
   <h1>Read Nation</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/nationServletRead'/>" method="post">
+<form action="<c:url value='/Entity1ServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	ID    :<input type="text" name="id" value="${nation.id }"/>
+	Nation    :<input type="text" name="username" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>

@@ -41,7 +41,7 @@
 	demographic_data_city	：<input type="text" name="demographic_data_state" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create City"/>
+	<input type="submit" value="Create nation"/>
 </form>
   </body>
 </html>

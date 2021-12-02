@@ -22,10 +22,10 @@
   
   <body>
   <h1>Update Nation</h1>
-<form action="<c:url value='/nationServletUpdate'/>" method="post">
+<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Update ID   :<input type="text" name="id" value="${nation.nation_id }"/>
-	<span style="color: red; font-weight: 900">${nation.nation_id }</span>
+	Update Nation   :<input type="text" name="username" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
 	<input type="submit" value="Update Nation"/>
 </form>

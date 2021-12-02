@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Nation</title>
+    <title>Delete Entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,26 +21,19 @@
   </head>
   
   <body>
-  <h1>Delete Nation</h1>
+  <h1>Delete Entity</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/nationServletDelete'/>" method="post">
+<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="id" value="${nation.nation_id }"/>
-		
-		
-id:<input type="text" name="id" value="${nation.nation_id }" disabled/>
-<br />
-
-state：<input type="text" name="state" value="${nation.state }" />
-<br />
-
-health_data_nation	：<input type="text" name="health_data_nation" value="${nation.health_data_nation }" />
-<br />
-
-demographic_data_nation	：<input type="text" name="demographic_data_nation" value="${nation.demographic_data_nation }" />
-<br />
+		<input type="hidden" name="username" value="${entity1.username }"/>
+	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	<br/>
 	
-	<input type="submit" value="Delete Nation"/>
+	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	<br/>
+	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Entity1"/>
 </form>
 
 </body>
