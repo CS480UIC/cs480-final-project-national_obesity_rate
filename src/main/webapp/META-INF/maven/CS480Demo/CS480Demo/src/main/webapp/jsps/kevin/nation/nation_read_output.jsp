@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read State Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,20 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read State Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	
+	state_id    :<input type="text" name="state_id" value="${state.state_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	currentState：<input type="text" name="currentState" value="${state.currentState }"/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	health_data_state	：<input type="text" name="health_data_state" value="${state.health_data_state }"/>
 	<br/>
+	demographic_data_state	：<input type="text" name="demographic_data_state" value="${state.demographic_data_state }"/>
+	<br/>
+	
+	
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

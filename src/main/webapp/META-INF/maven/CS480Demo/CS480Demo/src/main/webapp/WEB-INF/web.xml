@@ -83,6 +83,96 @@
   </servlet-mapping>
   
   
+    <servlet>
+    <description></description>
+    <display-name>nationServletCreate</display-name>
+    <servlet-name>nationServletCreate</servlet-name>
+    <servlet-class>nation.web.servlet.nationServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nationServletCreate</servlet-name>
+    <url-pattern>/nationServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <description></description>
+    <display-name>nationServletRead</display-name>
+    <servlet-name>nationServletRead</servlet-name>
+    <servlet-class>nation.web.servlet.nationServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nationServletRead</servlet-name>
+    <url-pattern>/nationServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>nationServletDelete</display-name>
+    <servlet-name>nationServletDelete</servlet-name>
+    <servlet-class>nation.web.servlet.nationServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nationServletDelete</servlet-name>
+    <url-pattern>/nationServletDelete</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+    <description></description>
+    <display-name>nationServletUpdate</display-name>
+    <servlet-name>nationServletUpdate</servlet-name>
+    <servlet-class>nation.web.servlet.nationServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>nationServletUpdate</servlet-name>
+    <url-pattern>/nationServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>stateServletCreate</display-name>
+    <servlet-name>stateServletCreate</servlet-name>
+    <servlet-class>state.web.servlet.stateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletCreate</servlet-name>
+    <url-pattern>/stateServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>stateServletRead</display-name>
+    <servlet-name>stateServletRead</servlet-name>
+    <servlet-class>state.web.servlet.stateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletRead</servlet-name>
+    <url-pattern>/stateServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>stateServletDelete</display-name>
+    <servlet-name>stateServletDelete</servlet-name>
+    <servlet-class>state.web.servlet.stateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletDelete</servlet-name>
+    <url-pattern>/stateServletDelete</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>stateServletUpdate</display-name>
+    <servlet-name>stateServletUpdate</servlet-name>
+    <servlet-class>state.web.servlet.stateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletUpdate</servlet-name>
+    <url-pattern>/stateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>
