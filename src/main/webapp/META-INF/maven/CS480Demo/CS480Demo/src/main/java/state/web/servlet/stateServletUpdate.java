@@ -1,8 +1,7 @@
-package entity1.web.servlet;
+package state.web.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -11,20 +10,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import entity1.dao.Entity1Dao;
-import entity1.domain.state;
+import state.dao.stateDao;
+import state.domain.state;
 
 /**
  * Servlet implementation class UserServlet
  */
 
-public class Entity1ServletUpdate extends HttpServlet {
+public class stateServletUpdate extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Entity1ServletUpdate() {
+	public stateServletUpdate() {
 		super();
 	}
 
@@ -41,13 +40,13 @@ public class Entity1ServletUpdate extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String method = request.getParameter("method");
-		Entity1Dao entity1dao = new Entity1Dao();
-		state entity1 = null;
+		stateDao stateDao = new stateDao();
+		state state = null;
 
 		if(method.equals("search"))
 		{
 			try {
-				entity1 = entity1dao.findByUsername(request.getParameter("username"));
+				state = stateDao.findBystate_id(Integer.parseInt(request.getParameter("id")));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -56,14 +55,14 @@ public class Entity1ServletUpdate extends HttpServlet {
 				e1.printStackTrace();
 			}
 
-			if(entity1.getUsername()!=null){
-				request.setAttribute("entity1", entity1);
-				request.getRequestDispatcher("/jsps/entity1/entity1_update_output.jsp").forward(request, response);
+			if(state.getHealth_data_state()!=null){
+				request.setAttribute("state", state);
+				request.getRequestDispatcher("/jsps/state/state_update_output.jsp").forward(request, response);
 
 			}
 			else{
-				request.setAttribute("msg", "Entity not found");
-				request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+				request.setAttribute("msg", "State not found");
+				request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 			}
 		}
 		else if(method.equals("update"))
@@ -76,12 +75,16 @@ public class Entity1ServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setPassword(info.get(2));
-			form.setEmail(info.get(3));
-			form.setUsername(request.getParameter("username"));
-
+		
+			
+			form.setState_id(Integer.parseInt(info.get(1)));
+			form.setCurrentState(info.get(2));	
+			form.setHealth_data_state(Integer.parseInt(info.get(3)));
+			form.setDemographic_data_state(Integer.parseInt(info.get(4)));
+			
+	
 			try {
-				entity1dao.update(form);
+				stateDao.update(form);
 
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
@@ -90,8 +93,8 @@ public class Entity1ServletUpdate extends HttpServlet {
 			} catch (IllegalAccessException e1) {
 				e1.printStackTrace();
 			}
-			request.setAttribute("msg", "Entity Updated");
-			request.getRequestDispatcher("/jsps/entity1/entity1_read_output.jsp").forward(request, response);
+			request.setAttribute("msg", "State Updated");
+			request.getRequestDispatcher("/jsps/state/state_read_output.jsp").forward(request, response);
 		}
 	}
 }

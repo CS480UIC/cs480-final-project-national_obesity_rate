@@ -128,6 +128,51 @@
     <url-pattern>/nationServletUpdate</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+    <description></description>
+    <display-name>stateServletCreate</display-name>
+    <servlet-name>stateServletCreate</servlet-name>
+    <servlet-class>state.web.servlet.stateServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletCreate</servlet-name>
+    <url-pattern>/stateServletCreate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>stateServletRead</display-name>
+    <servlet-name>stateServletRead</servlet-name>
+    <servlet-class>state.web.servlet.stateServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletRead</servlet-name>
+    <url-pattern>/stateServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>stateServletDelete</display-name>
+    <servlet-name>stateServletDelete</servlet-name>
+    <servlet-class>state.web.servlet.stateServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletDelete</servlet-name>
+    <url-pattern>/stateServletDelete</url-pattern>
+  </servlet-mapping>
+  
+     <servlet>
+    <description></description>
+    <display-name>stateServletUpdate</display-name>
+    <servlet-name>stateServletUpdate</servlet-name>
+    <servlet-class>state.web.servlet.stateServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>stateServletUpdate</servlet-name>
+    <url-pattern>/stateServletUpdate</url-pattern>
+  </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>findAll</display-name>

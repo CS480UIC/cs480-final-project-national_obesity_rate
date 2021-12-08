@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete State</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,28 +21,38 @@
   </head>
   
   <body>
-  <h1>Update Entity</h1>
+  <h1>Update State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username1" value="${entity1.username }" disabled/>
+
+	
+	state_id    :<input type="text" name="id" value="${state.state_id }" disabled/>
+	<br/>
+	currentState：<input type="text" name="currentState" value="${state.currentState }" disabled/>
+	<br/>
+	health_data_state	：<input type="text" name="health_data_state" value="${state.health_data_state }" disabled/>
+	<br/>
+	demographic_data_state	：<input type="text" name="demographic_data_state" value="${state.demographic_data_state }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password1" value="${entity1.password }" disabled />
-	<br/>
-	Email	：<input type="text" name="email1" value="${entity1.email }" disabled/>
-	<br/>
 </form>
 <h1>Update the values below</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+<form action="<c:url value='/stateServletUpdate'/>" method="post">
+
 		<input type="hidden" name="method" value="update"/>
-				<input type="hidden" name="username" value="${entity1.username }"/>
-	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+				<input type="hidden" name="username" value="${state.state_id }"/>
+				
+				
+	
+	currentState：<input type="text" name="currentState" value="${form.currentState }" />
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	health_data_state	：<input type="text" name="health_data_state" value="${form.health_data_state }" />
 	<br/>
-	<input type="submit" value="Update Entity1"/>
+	demographic_data_state	：<input type="text" name="demographic_data_state" value="${form.demographic_data_state }" />
+	<br/>
+	
+	
+	<input type="submit" value="Update State"/>
 </form>
 
 </body>

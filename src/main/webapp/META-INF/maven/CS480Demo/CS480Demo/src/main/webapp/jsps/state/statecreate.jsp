@@ -22,18 +22,18 @@
   
   <body>
   <h1>Create a State</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	state_id    :<input type="text" name="state_id" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/stateServletCreate'/>" method="post">
+	state_id    :<input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	current_state：<input type="text" name="current_state" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	currentState：<input type="text" name="currentState" value="${form.currentState }"/>
+	<span style="color: red; font-weight: 900">${errors.currentState }</span>
 	<br/>
-	health_data_state	：<input type="text" name="health_data_state" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	health_data_state	：<input type="text" name="health_data_state" value="${form.health_data_state }"/>
+	<span style="color: red; font-weight: 900">${errors.health_data_state }</span>
 	<br/>
-	demographic_data_state	：<input type="text" name="demographic_data_state" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	demographic_data_state	：<input type="text" name="demographic_data_state" value="${form.demographic_data_state }"/>
+	<span style="color: red; font-weight: 900">${errors.demographic_data_state }</span>
 	<br/>
 	<input type="submit" value="Create State"/>
 </form>

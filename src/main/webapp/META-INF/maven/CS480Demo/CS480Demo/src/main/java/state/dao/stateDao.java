@@ -1,4 +1,4 @@
-package entity1.dao;
+package state.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ import state.domain.state;
 /**
  * DDL functions performed in database
  */
-public class Entity1Dao {
+public class stateDao {
 	
 	/**
 	 * user name to connect to the database 
@@ -29,29 +29,33 @@ public class Entity1Dao {
 	 */
 	private String MySQL_password = "gulag"; //TODO change password
 
-	public state findByUsername(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
-		state entity1 = new state();
+	public state findBystate_id(Integer state_idP) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+		state state = new state();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
-		    String sql = "select * from entity1 where username=?";
+		    String sql = "select * from state where ID=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,state_idP);
 		    ResultSet resultSet = preparestatement.executeQuery();
 
 		    while(resultSet.next()){
-		    	String user_name = resultSet.getString("username");
-		    	if(user_name.equals(username)){
-		    		entity1.setUsername(resultSet.getString("username"));
-		    		entity1.setPassword(resultSet.getString("password"));
-		    		entity1.setEmail(resultSet.getString("email"));		
+		    	Integer id = Integer.parseInt(resultSet.getString("ID"));
+		    	if(id == state_idP){
+		    		state.setState_id( Integer.parseInt(resultSet.getString("ID")));
+		    		state.setCurrentState(resultSet.getString("currentstate"));
+		    		state.setHealth_data_state(Integer.parseInt(resultSet.getString("health_data_state")));
+		    		state.setDemographic_data_state(Integer.parseInt(resultSet.getString("demographic_data_state")));
+		    		
+		    	
+		    	
 		    	}
 		    }
 		    connect.close();
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
-		return entity1;
+		return state;
 	}	
 	
 	/**
@@ -67,11 +71,16 @@ public class Entity1Dao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "insert into entity1 values(?,?,?)";
+			String sql = "insert into state (ID, currentstate, health_data_state, demographic_data_state) values(?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getUsername());
-		    preparestatement.setString(2,form.getPassword());
-		    preparestatement.setString(3,form.getEmail());
+			
+			
+		    preparestatement.setInt(1,form.getState_id());
+		    preparestatement.setString(2,form.getCurrentState());
+		    preparestatement.setInt(3,form.getHealth_data_state());
+		    preparestatement.setInt(4,form.getDemographic_data_state());
+		    
+		    
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -91,11 +100,15 @@ public class Entity1Dao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE entity1 SET password = ?, email = ? where username = ?;";
+			String sql = "UPDATE state SET id = ?, currentstate = ?,health_data_state=? where demographic_data_state=?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getPassword());
-			preparestatement.setString(2,form.getEmail());
-		    preparestatement.setString(3,form.getUsername());
+		    
+		    
+		    preparestatement.setInt(1,form.getState_id());
+		    preparestatement.setString(2,form.getCurrentState());
+			preparestatement.setInt(3,form.getHealth_data_state());
+		    preparestatement.setInt(4,form.getDemographic_data_state());
+		    
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -110,14 +123,14 @@ public class Entity1Dao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
-	public void delete(String username) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+	public void delete(String id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_password);
 			
-			String sql = "delete from entity1 where username = ?";
+			String sql = "delete from state where id = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,username);
+		    preparestatement.setInt(1,Integer.parseInt(id));
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {

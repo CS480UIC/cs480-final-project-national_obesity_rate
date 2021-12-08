@@ -23,11 +23,13 @@
   <body>
   <h1>Read State</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/stateServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	State    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	State_ID    :<input type="text" name="ID" value="${state.ID }"/>
 	<br/>
+	
+	
+	
 <%-- 	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
