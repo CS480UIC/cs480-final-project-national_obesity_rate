@@ -1,0 +1,6 @@
+Timestamp,id,family_history,family_genetic,sibling,parent,grandparent,children
+10/19/2021 22:45:07,1,Old,None2,2,2,4,0
+10/19/2021 22:45:46,908,None,Alzheimers,5,1,2,2
+10/19/2021 22:46:52,765,family has no notable history,family has heart disease,0,2,0,0
+10/19/2021 22:47:10,66,None,None,2,2,2,2
+10/19/2021 22:47:31,91,Cancer,None,4,2,4,3
